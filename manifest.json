@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Inject JS",
+  "version": "1.0",
+
+  "description": "Inject a js file to a web page",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://neo-cyclops.logpoint.com/",
+        "*://neo-cyclops.logpoint.com/home"
+      ],
+      "js": ["dist/index.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "injectjs@prabinlamichhane.info.np"
+    }
+  }
+}
